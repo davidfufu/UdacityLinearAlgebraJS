@@ -1,5 +1,4 @@
 let Vector = require('./vector');
-let Decimal = require('./decimal');
 let Arith = require('./math');
 
 class Line {
@@ -7,7 +6,7 @@ class Line {
 		this.firstNonZeroIndex = function(iterable) {
 			for (let i = 0; i < iterable.length; i++) {
 				let item = iterable[i];
-				if (!Decimal.isNearZero(item)) {
+				if (!Arith.isNearZero(item)) {
 					return i;
 				}
 			}

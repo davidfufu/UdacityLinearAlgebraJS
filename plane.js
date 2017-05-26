@@ -1,5 +1,4 @@
 let Vector = require('./vector');
-let Decimal = require('./decimal');
 let Arith = require('./math');
 let Line = require('./line');
 
@@ -8,7 +7,7 @@ class Plane {
 		this.firstNonZeroIndex = function(iterable) {
 			for (let i = 0; i < iterable.length; i++) {
 				let item = iterable[i];
-				if (!Decimal.isNearZero(item)) {
+				if (!Arith.isNearZero(item)) {
 					return i;
 				}
 			}
@@ -109,7 +108,7 @@ class Plane {
 			// 		return false;
 			// 	} else {
 			// 		diff = this.constantTerm - otherPlane.constantTerm;
-			// 		return Decimal.isNearZero(diff);
+			// 		return Arith.isNearZero(diff);
 			// 	}
 			// }
 			// else if (Vector.isZero(otherPlane.normalVector)) {
